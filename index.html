@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>LaTeX template for a Harvard dissertation by suchow</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>LaTeX template for a Harvard dissertation</h1>
+        <p></p>
+        <p class="view"><a href="https://github.com/suchow/LaTeX-template-for-Harvard-dissertation">View the Project on GitHub <small>suchow/LaTeX-template-for-Harvard-dissertation</small></a></p>
+        <ul>
+          <li><a href="https://github.com/suchow/LaTeX-template-for-Harvard-dissertation/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/suchow/LaTeX-template-for-Harvard-dissertation/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/suchow/LaTeX-template-for-Harvard-dissertation">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><img src="http://zipf.it/images/colophon.jpg" alt="sample colophon"></p>
+
+<h2>An introduction</h2>
+
+<p>This package provides all of the files needed to support the production and typesetting of a PhD thesis at Harvard. For contributions, comments, and bug reports, please contact Jordan Suchow at suchow@fas.harvard.edu.</p>
+
+<p>Contributions were made by Andrew Leifer (leifer@fas.harvard.edu), and thanks to Clemens Eppner for the Ubuntu instructions.</p>
+
+<h2>Installation</h2>
+
+<h3>For Windows XP:</h3>
+
+<p>Download basic-miktex-2.9.4244.exe  <a href="http://miktex.org/">http://miktex.org/</a>
+Download SumatraPDF v 1.5.1 <a href="http://blog.kowalczyk.info/software/sumatrapdf/free-pdf-reader.html">http://blog.kowalczyk.info/software/sumatrapdf/free-pdf-reader.html</a>
+Download this Git Repo </p>
+
+<p>Installatioan instructions:
+Copy the contents of fonts\ into 
+C:\Program Files\MiKTeX 2.9\fonts\opentype\public\ChaparralPro</p>
+
+<p>To complie, from the MSYS command prompt run: 
+xelatex -synctex=-1 thesis.tex</p>
+
+<h3>For Mac OS X</h3>
+
+<p>Downlaod MacTex (when I tried, the main site was down so I used this mirror)
+<a href="http://mirror.unl.edu/ctan/systems/mac/mactex/MacTeX.mpkg.zip">http://mirror.unl.edu/ctan/systems/mac/mactex/MacTeX.mpkg.zip</a><br>
+it should be roughly 2 GB
+Install.</p>
+
+<p>I use the free PDF reader Skim and the non-free editor TextMate. Both integrate well with latex:</p>
+
+<p>Skim is available <a href="http://skim-app.sourceforge.net/">http://skim-app.sourceforge.net/</a>
+Set Skim-&gt;Preferences-&gt;Sync to the Preset "TextMate." You can command-shift-click in the PDF to pull up a line in the code in Textmate.</p>
+
+<p>Now to setup TextMate, go to the Bundle-&gt;LaTex-&gt;Preferences and choose xelatex and Skim respectively.
+Then go to Bundles-&gt;Latex-&gt; File Preferences -&gt; Set Master file and select your master file.. thesis.tex</p>
+
+<p>To compile, from the terminal run:
+xelatex  thesis</p>
+
+<p>I also use Zotero <a href="http://www.zotero.org/">http://www.zotero.org/</a> with the following modification to enable drag and drop cite keys:
+For Bibtex Drag and Drop Functionality from Zotero see:
+<a href="http://forums.zotero.org/discussion/5094/drag-and-drop-bibtex-cite/">http://forums.zotero.org/discussion/5094/drag-and-drop-bibtex-cite/</a>
+and in particular:
+<a href="http://pastebin.com/GXmCJevn">http://pastebin.com/GXmCJevn</a></p>
+
+<h3>For Ubuntu</h3>
+
+<ol>
+<li>
+<p>Installing xetex: </p>
+
+<p>sudo apt-get install texlive-xetex</p>
+</li>
+<li>
+<p>Copy the fonts (from the template folder): </p>
+
+<p>sudo cp fonts/*/usr/local/share/fonts/</p>
+</li>
+<li>
+<p>Add </p>
+
+<p>\aliasfontfeatureoption{Ligatures}{Historic}{Historical} </p>
+</li>
+</ol><p>in harvard-thesis.cls just above the \setromanfont... command.
+This is because the syntax changed at some point from "Historical" to
+"Historic" but the ubuntu package is obviously a little behind. See
+here: <a href="http://tug.org/pipermail/xetex/2010-September/018106.html">http://tug.org/pipermail/xetex/2010-September/018106.html</a></p>
+
+<ol>
+<li>Run xelatex thesis.tex</li>
+</ol><h2>General Links</h2>
+
+<p>Harvard Approved Binding Sites:
+<a href="http://www.lbibinders.org/index.php?option=com_content&amp;view=article&amp;id=32&amp;Itemid=80">http://www.lbibinders.org/index.php?option=com_content&amp;view=article&amp;id=32&amp;Itemid=80</a></p>
+
+<p>Harvard Preferred Paper:
+<a href="http://www.universityproducts.com/cart.php?m=product_list&amp;c=791&amp;primary=1&amp;navTree=&amp;msg=1314731211&amp;total=2">http://www.universityproducts.com/cart.php?m=product_list&amp;c=791&amp;primary=1&amp;navTree=&amp;msg=1314731211&amp;total=2</a></p>
+
+<h2>License</h2>
+
+<p>This software is free and is covered under the MIT License, given here:</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/suchow">suchow</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
