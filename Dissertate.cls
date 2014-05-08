@@ -13,6 +13,18 @@
 \ProvidesClass{Dissertate}[2014/01/24 v1.0 Dissertate Class]
 \LoadClass[12pt, oneside, letterpaper]{book}
 
+%add packages here
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{rotating}
+\usepackage{alphalph} %higher footnote number
+\renewcommand{\footnote}{\emph{\alphalph{\value{footnote}}}} %higher footnote number
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{longtable}
+\usepackage{bbm}
+
 % some definitions
 \def\degreeyear#1{\gdef\@degreeyear{#1}}
 \def\degreemonth#1{\gdef\@degreemonth{#1}}
@@ -129,3 +141,6 @@
       {\@latex@warning{Empty `thebibliography' environment}}
      \endlist}
 \makeatother
+
+
+
