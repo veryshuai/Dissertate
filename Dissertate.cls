@@ -86,8 +86,8 @@
 
 \parindent 12pt
 \RequirePackage{mathspec}
-\setmathsfont(Digits,Latin,Greek)[Numbers={Proportional}]{EB Garamond}
-\setmathrm{EB Garamond}
+%\setmathsfont(Digits,Latin,Greek)[Numbers={Proportional}]{EB Garamond}
+%\setmathrm{EB Garamond}
 
 \widowpenalty=300
 \clubpenalty=300
@@ -106,7 +106,6 @@
 								figurewithin=chapter,
 								tablewithin=chapter]{caption}
 
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 %\onehalfspacing
 %\doublespacing
@@ -142,5 +141,6 @@
      \endlist}
 \makeatother
 
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 
