@@ -31,8 +31,7 @@ of knowledge. The diffusion of knowledge is taken to be a stochastic
 process. The probability of learning about a new idea depends only on
 the fraction of current colleagues who already know about it, and fixed,
 potentially unobservable characteristics of a worker. The second part of
-the model is movement between firms. Moving is costly, payoffs also depend on permanent characteristics
-and unobservables, and the worker moves to maximize expected lifetime
+the model is movement between firms. Moving is costly, payoffs also depend on permanent characteristics and unobservables, and the worker moves to maximize expected lifetime
 utility.
 
 The model is estimated using academic citations, a sort of paper trail
@@ -143,9 +142,9 @@ just after a paper is published, it dies away over time. This picture
 suggests that the diffusion of knowledge depends in some way on physical
 proximity.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    \includegraphics{pics/raw_diffusion.png}
+    \includegraphics[scale=0.35]{pics/raw_diffusion.png}
     \caption{Citing paper location sharing over time.}
     \label{fig:rawdiffusion}
 \end{figure}
@@ -490,22 +489,22 @@ in 1987, the year after Jensen's paper was published. Tables \ref{tab:aut_sum}
 and \ref{tab:dep_sum} contain summary statistics for the data I use in
 estimation.
 
-\begin{table}[h!]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \begin{tabular}{lllllll}
         \hline
-                 & Obs Number & In Field & Citers & Moves & Cits / Pap, avg & Cits / Pap, sd \\ \hline
+                 & Obs Number & In Field & Citers & Moves & Cits / Pap, avg & Cits / Pap, sd \\ \hline \hline
         Academicss  & 3876       & 150      & 122    & 679   & 26              & 29             \\ \hline
     \end{tabular}
     \caption{Academic summary statistics}
     \label{tab:aut_sum}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \begin{tabular}{lllllll}
         \hline
-                    & Obs Number & 1987 med size & 1994 med size & Field, (avg, sd) & Avg cits / pap, (avg, sd) \\ \hline
+                    & Obs Number & 1987 med size & 1994 med size & Field, (avg, sd) & Avg cits / pap, (avg, sd) \\ \hline\hline
         Departments & 104        & 16               & 24               & (0.03,0.06)           & (20,9) \\ \hline
     \end{tabular}
     \caption{Department summary statistics}
@@ -632,9 +631,9 @@ is similar to the data cut I use in the structural exercise.
 
 \begin{table}[h]
     \centering
-    \begin{tabular}{|l|l|l|l|l|}
+    \begin{tabular}{lllll}
         \hline
-                            & net in-moves &   net in-moves &     net in-moves &    net in-moves \\   \hline
+                            & net in-moves &   net in-moves &     net in-moves &    net in-moves \\   \hline \hline
 dum91bd                     &     -8.568** &     -12.280**  &      -6.784**    &      -7.055**   \\
                             &      (4.24)  &      (4.93)    &      (2.88)      &      (2.84)     \\
 year dummies                &        no    &         yes    &          yes     &         yes     \\
@@ -692,22 +691,22 @@ people not in the field ultimately cite the paper, so I assign to the
 non-field interest probability $\gamma_0$ a beta distribution with
 parameters 1/8 and 2, which gives a standard deviation of 0.13.
 
-\begin{table}[h!]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|l|l|}
+    \begin{tabular}{ll}
         \hline
-                             & \textbf{Prior} \\ \hline
-         $\alpha$            & Norm(0,100)    \\ \hline
-         $\beta$             & Exp(300)       \\ \hline
-         $\gamma_{F}$        & Beta(1,2)      \\ \hline
-         $\gamma_{NF}$       & Beta(0.125,2)  \\ \hline
-         $\xi_f$             & Norm(0,100)    \\ \hline
-         $\xi_l$             & Norm(0,100)    \\ \hline
-         $\xi_q$             & Norm(0,100)    \\ \hline
-         $\mathcal{C}$       & Exp(300)       \\ \hline
-         $\phi_F$            & Norm(0,100)    \\ \hline
-         $\phi_Q$            & Norm(0,100)    \\ \hline
-         $\sigma$            & Exp(300)       \\ \hline
+                             & \textbf{Prior} \\ \hline \hline
+         $\alpha$            & Norm(0,100)    \\ 
+         $\beta$             & Exp(300)       \\ 
+         $\gamma_{F}$        & Beta(1,2)      \\ 
+         $\gamma_{NF}$       & Beta(0.125,2)  \\ 
+         $\xi_f$             & Norm(0,100)    \\ 
+         $\xi_l$             & Norm(0,100)    \\ 
+         $\xi_q$             & Norm(0,100)    \\ 
+         $\mathcal{C}$       & Exp(300)       \\ 
+         $\phi_F$            & Norm(0,100)    \\ 
+         $\phi_Q$            & Norm(0,100)    \\ 
+         $\sigma$            & Exp(300)       \\ 
          $\xi_{ex}$          & Exp(300)       \\ \hline
 
     \end{tabular}
@@ -765,29 +764,29 @@ parameters in the estimation routine pass the Gelman-Rubin test.
 
 \section{Results}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    \includegraphics{pics/params_dists_big.png}
+    \includegraphics[scale=0.35]{pics/params_dists_big.png}
     \caption{Posterior distributions}
     \label{fig:big_params}
 \end{figure}
 
-\begin{table}[h!]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|l|l|l|l|l|l|}
+    \begin{tabular}{llllll}
         \hline
-                              & mean   & std   & 25\%   & 50\%   & 75\%   \\ \hline
-         $\alpha$             & -0.447 & 0.179 & -0.571 & -0.440 & -0.322 \\ \hline
-         $\beta$              & 14.128 & 5.850 & 9.801  & 14.138 & 18.244 \\ \hline
-         $\gamma_{F}$         & 0.035  & 0.004 & 0.031  & 0.034  & 0.038  \\ \hline
-         $\gamma_{NF}$        & 0.094  & 0.031 & 0.072  & 0.092  & 0.112  \\ \hline
-         $\xi_f$              & 2.208  & 1.374 & 1.419  & 2.367  & 3.216  \\ \hline
-         $\xi_l$              & -0.293 & 0.411 & -0.577 & -0.289 & -0.019 \\ \hline
-         $\xi_q$              & 1.050  & 0.021 & 1.035  & 1.049  & 1.065  \\ \hline
-         $\mathcal{C}$        & 8.426  & 0.052 & 8.387  & 8.426  & 8.462  \\ \hline
-         $\phi_Q$             & -1.302 & 0.014 & -1.312 & -1.302 & -1.293 \\ \hline
-         $\phi_F$             & -7.603 & 0.230 & -7.754 & -7.611 & -7.443 \\ \hline
-         $\sigma$             & 0.499  & 0.005 & 0.495  & 0.499  & 0.503  \\ \hline
+                              & mean   & std   & 25\%   & 50\%   & 75\%   \\ \hline \hline
+         $\alpha$             & -0.447 & 0.179 & -0.571 & -0.440 & -0.322 \\ 
+         $\beta$              & 14.128 & 5.850 & 9.801  & 14.138 & 18.244 \\ 
+         $\gamma_{F}$         & 0.035  & 0.004 & 0.031  & 0.034  & 0.038  \\ 
+         $\gamma_{NF}$        & 0.094  & 0.031 & 0.072  & 0.092  & 0.112  \\ 
+         $\xi_f$              & 2.208  & 1.374 & 1.419  & 2.367  & 3.216  \\ 
+         $\xi_l$              & -0.293 & 0.411 & -0.577 & -0.289 & -0.019 \\ 
+         $\xi_q$              & 1.050  & 0.021 & 1.035  & 1.049  & 1.065  \\ 
+         $\mathcal{C}$        & 8.426  & 0.052 & 8.387  & 8.426  & 8.462  \\ 
+         $\phi_Q$             & -1.302 & 0.014 & -1.312 & -1.302 & -1.293 \\ 
+         $\phi_F$             & -7.603 & 0.230 & -7.754 & -7.611 & -7.443 \\ 
+         $\sigma$             & 0.499  & 0.005 & 0.495  & 0.499  & 0.503  \\ 
          $\xi_{ex}$           & 0.919  & 0.739 & 0.343  & 0.756  & 1.312  \\ \hline
                              
     \end{tabular}
@@ -815,9 +814,9 @@ The size of the effect depends on the latent type.  The histogram in in \ref{fig
 in the data, which are below zero because of the initial condition equation described in Section \ref{sec:init_cond}.  For
 the latent types in the data, an increase from 0\% to 5\% coworker knowledge raises annual learning probabilities by 35-60\%.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    \includegraphics{pics/learn_probs.png}
+    \includegraphics[scale=0.35]{pics/learn_probs.png}
     \caption{Annual learning probability percent increase, 0\% to 5\% coworker knowledge of new paper}
     \label{fig:learn_probs}
 \end{figure}
@@ -896,9 +895,9 @@ learning about the innovation, and the vertical axis is share of people
 who know about the new idea. The leading firm is farther up the logistic
 diffusion curve.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    \includegraphics{plots/mean_field_logistic.png}
+    \includegraphics[scale=0.35]{plots/mean_field_logistic.png}
     \caption{Movement between firms on a diffusion curve}
     \label{fig:simp_dif}
 \end{figure}
@@ -960,8 +959,8 @@ department, latent type, interest for each academic using the estimated
 parameters. Results are generated for four values of
 $\mathcal{C}$: the full estimated cost parameter, 70\% of the parameter, 50\% of the parameter, and totally shutting down the cost of moving between departments.  In the estimation data, about 3-4\% of academics move each year.  70\% of the cost parameter is chosen because it induces 9-10\% of academics to move each year.
 
-\begin{figure}[h!]
-    \includegraphics{pics/sim_plots_cf.png}
+\begin{figure}[!ht]
+    \includegraphics[scale=0.35]{pics/sim_plots_cf.png}
     \caption{Counterfactual statistics, posterior expectations}
     \label{fig:cf}
 \end{figure}
@@ -977,8 +976,8 @@ is the log difference between the data offer rate and half of the offer rate.  I
 the dotted lines are the 90\% confidence intervals on the
 expectation of the posterior distribution.
 
-\begin{figure}[h!]
-    \includegraphics{pics/sim_plots_cf_frac.png}
+\begin{figure}[!ht]
+    \includegraphics[scale=0.35]{pics/sim_plots_cf_frac.png}
     \caption{log change in posterior expectations}
     \label{fig:cf_frac}
 \end{figure}
@@ -1069,9 +1068,9 @@ visitor will learn about the new paper with the American probability \eqref{eq:c
 simulate the model with three values of $\lambda_c$: 0, 0.01, and 0.02, and
 1100 random draws of parameters from the posterior distribution.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    \includegraphics{pics/sim_plots_cs.png}
+    \includegraphics[scale=0.35]{pics/sim_plots_cs.png}
     \caption{Expected Chinese knowledge diffusion}
     \label{fig:chinsim}
 \end{figure}
@@ -1134,25 +1133,25 @@ specifications, I maintain the assumption that an academic cannot learn about th
 until 1987, the year after it was published.  To estimate the publication lag extension,
 I pool the three observed 1987 cites in with the observed 1988 cites.
 
-\begin{table}[h!]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|l|ll|ll|ll|ll|}
+    \begin{tabular}{lllllllll}
         \hline
-       \textbf{param} & \multicolumn{2}{c|}{\textbf{baseline}} & \multicolumn{2}{c|}{\textbf{field-dep}} & \multicolumn{2}{c|}{\textbf{nation}}  & \multicolumn{2}{c|}{\textbf{lag}}    \\ \hline
-        $\alpha$      & -0.447 & (0.179) & -0.574 & (0.204) & -0.955 & (0.184) & -0.252 & (0.159) \\ \hline
-        $\alpha_f$    &        &         & 0.170  & (0.488) &        &         &        &         \\ \hline
-        $\beta$       & 14.128 & (5.850) & 16.991 & (5.881) & 6.537  & (4.654) & 10.418 & (4.295) \\ \hline
-        $\beta_f$     &        &         & 78.846 & (71.576)&        &         &        &         \\ \hline
-        $\beta_n$     &        &         &        &         & 81.257 & (16.031)&        &         \\ \hline
-        $\gamma_{nf}$ & 0.035  & (0.004) & 0.036  & (0.005) & 0.027  & (0.003) & 0.028  & (0.003) \\ \hline
-        $\gamma_{f}$  & 0.094  & (0.031) & 0.078  & (0.032) & 0.071  & (0.022) & 0.084  & (0.026) \\ \hline
-        $\xi_f$       & 2.208  & (1.374) & 2.310  & (1.379) & 2.347  & (1.434) & 2.302  & (1.379) \\ \hline
-        $\xi_l$       & -0.293 & (0.411) & -0.269 & (0.425) & -0.082 & (0.421) & -0.095 & (0.423) \\ \hline
-        $\xi_q$       & 1.050  & (0.021) & 1.051  & (0.020) & 1.084  & (0.019) & 1.084  & (0.018) \\ \hline
-        $\phi_Q$      & -1.302 & (0.014) & -1.302 & (0.017) & -1.297 & (0.015) & -1.298 & (0.016) \\ \hline
-        $\phi_F$      & -7.603 & (0.230) & -7.627 & (0.265) & -7.629 & (0.224) & -7.606 & (0.234) \\ \hline
-        $\sigma$      & 0.499  & (0.005) & 0.499  & (0.005) & 0.496  & (0.005) & 0.496  & (0.005) \\ \hline
-        $\mathcal{C}$ & 8.426  & (0.052) & 8.425  & (0.049) & 8.651  & (0.049) & 8.655  & (0.049) \\ \hline
+       \textbf{param} & \multicolumn{2}{c}{\textbf{baseline}} & \multicolumn{2}{c}{\textbf{field-dep}} & \multicolumn{2}{c}{\textbf{nation}}  & \multicolumn{2}{c}{\textbf{lag}}    \\ \hline \hline
+        $\alpha$      & -0.447 & (0.179) & -0.574 & (0.204) & -0.955 & (0.184) & -0.252 & (0.159) \\ 
+        $\alpha_f$    &        &         & 0.170  & (0.488) &        &         &        &         \\ 
+        $\beta$       & 14.128 & (5.850) & 16.991 & (5.881) & 6.537  & (4.654) & 10.418 & (4.295) \\ 
+        $\beta_f$     &        &         & 78.846 & (71.576)&        &         &        &         \\ 
+        $\beta_n$     &        &         &        &         & 81.257 & (16.031)&        &         \\ 
+        $\gamma_{nf}$ & 0.035  & (0.004) & 0.036  & (0.005) & 0.027  & (0.003) & 0.028  & (0.003) \\ 
+        $\gamma_{f}$  & 0.094  & (0.031) & 0.078  & (0.032) & 0.071  & (0.022) & 0.084  & (0.026) \\ 
+        $\xi_f$       & 2.208  & (1.374) & 2.310  & (1.379) & 2.347  & (1.434) & 2.302  & (1.379) \\ 
+        $\xi_l$       & -0.293 & (0.411) & -0.269 & (0.425) & -0.082 & (0.421) & -0.095 & (0.423) \\ 
+        $\xi_q$       & 1.050  & (0.021) & 1.051  & (0.020) & 1.084  & (0.019) & 1.084  & (0.018) \\ 
+        $\phi_Q$      & -1.302 & (0.014) & -1.302 & (0.017) & -1.297 & (0.015) & -1.298 & (0.016) \\ 
+        $\phi_F$      & -7.603 & (0.230) & -7.627 & (0.265) & -7.629 & (0.224) & -7.606 & (0.234) \\ 
+        $\sigma$      & 0.499  & (0.005) & 0.499  & (0.005) & 0.496  & (0.005) & 0.496  & (0.005) \\ 
+        $\mathcal{C}$ & 8.426  & (0.052) & 8.425  & (0.049) & 8.651  & (0.049) & 8.655  & (0.049) \\ 
         $\xi_{ex}$    & 0.919  & (0.739) & 0.001  & (0.026) & 0.095  & (0.282) & 0.082  & (0.245) \\ \hline
     \end{tabular}
     \caption{Posterior expectations, extensions versus baseline}
@@ -1198,9 +1197,9 @@ baseline model, and then simulate idea diffusion using the baseline and extended
 models separately.  Both moves and citation times are simulated separately for
 the publication lag model.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    \includegraphics{pics/sim_plots_mc.png}
+    \includegraphics[scale=0.35]{pics/sim_plots_mc.png}
     \caption{Model checking, simulations vs data}
     \label{fig:modcheck}
 \end{figure}
@@ -1229,12 +1228,13 @@ the baseline and the publication lag model in level.
 \section{Probit Model}
 \label{sec:end_probit}
 
-\begin{table}[h!]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{l|l|l|l|l|l|l|}
+    \begin{tabular}{lllllll}
+    \hline
                         &       cit92   &       cit92   &       cit92   &    cit92\_93  &    cit92\_93  &    cit92\_93  \\
                         &        b/se   &        b/se   &        b/se   &        b/se   &        b/se   &        b/se   \\
-    \textbf{probit eq 1}&               &               &               &               &               &               \\ \hline
+    \textbf{probit eq 1}&               &               &               &               &               &               \\ \hline \hline
             kfrac       &      26.952*  &      37.604*  &      40.753** &      26.362** &      38.034** &      41.238** \\
                         &     (14.78)   &     (19.84)   &     (16.95)   &     (11.68)   &     (15.97)   &     (18.75)   \\
               field     &               &       0.000   &       0.000   &               &       0.023   &       0.029   \\
@@ -1402,9 +1402,9 @@ papers which share a department with the originating papers, and the red
 line is the percentage of reference papers which share a department with
 the originating papers. The lighter lines are 5\% confidence intervals.
 
-\begin{figure}[htbp]
+\begin{figure}[!htbp]
 \centering
-\includegraphics{pics/jaf_results_pooled.png}
+\includegraphics[scale=0.35]{pics/jaf_results_pooled.png}
 \caption{Results of Jaffe exercise, Dark Blue = Citing Papers, Light Red =
 Reference Papers}
 \label{fig:jaf_ex}
@@ -1459,21 +1459,21 @@ Here $\mathbf{X}_i$ contains characteristics of author $i$ such as dummies for
 the first year $i$ was observed in my data.  
 
 
-\begin{table}[h!]
-    \begin{tabular}{|l|llll|}
+\begin{table}[!ht]
+    \begin{tabular}{lllll}
         \hline
-                           & Citation year & Citation year & Citation year & Citation year \\ \hline
+                           & Citation year & Citation year & Citation year & Citation year \\ \hline \hline
         Worked at Harvard  & -2.38**       & -2.13*        & -2.04**       & -27.93**      \\
         Total Jensen cites & --            & -0.13***      & -0.10***      & -0.05         \\
         First year dummies & no            & no            & yes           & yes           \\
         Only first cohort  & no            & yes           & no            & no            \\
-        Instrumented       & no            & no            & no            & yes           \\ \hline \hline
+        Instrumented       & no            & no            & no            & yes           \\ \hline
         IV First Stage     &               &               &               & Worked at Harvard \\ \hline
         Quality            &               &               &               & .001***       \\
         Total Jensen cites &               &               &               & .002          \\
         First year dummies &               &               &               & yes           \\ \hline
         Obs                & 669           & 438           & 669           & 669           \\
-        $R^2$              & 0.01          & 0.03          & 0.11          & --            \\ \hline \hline
+        $R^2$              & 0.01          & 0.03          & 0.11          & --            \\ \hline 
 
     \end{tabular}
     \caption{Effect of working at Harvard on year of Jensen citation}
@@ -1692,54 +1692,105 @@ at lower ranked departments publish more rarely, so that I do not
 observe them very often making the affiliation data noisy. Table \ref{tab:dep_field} at
 the end of this file is a sample of included departments and fields.
 
-\begin{table}
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{lllll}
-        DEPT                     & QUAL  & JENS. FIELD & NEP ABREV & FIELD NAME\\ \hline
-        UNIV MICHIGAN            & 0.884 & 0.035       & NEP-ACC   & Accounting \& Auditing\\
-        PURDUE UNIV              & 0.490 & 0.0036      & NEP-AFR   & Africa\\
-        PENN STATE UNIV          & 0.663 & 0.067       & NEP-AGE   & Economics of Ageing\\
-        HARVARD UNIV             & 1.0   & 0.014       & NEP-AGR   & Agricultural Economics\\
-        UNIV PENN                & 0.903 & 0.041       & NEP-ARA   & Arab World\\
-        CORNELL UNIV             & 0.817 & 0.016       & NEP-BAN   & Banking\\
-        UNIV ROCHESTER           & 0.355 & 0.086       & NEP-BEC   & Business Economics\\
-        MIT                      & 0.980 & 0.086       & NEP-CBA   & Central Banking\\
-        UNIV MARYLAND            & 0.798 & 0.060       & NEP-CBE   & Cognitive \& Behavioural Economics\\
-        STANFORD UNIV            & 0.932 & 0.028       & NEP-CDM   & Collective Decision-Making\\
-        UNIV DELAWARE            & 0.346 & 0.0         & NEP-CFN   & Corporate Finance\\
-        CARNEGIE MELLON UNIV     & 0.625 & 0.047       & NEP-CIS   & Confederation of Independent States\\
-        YALE UNIV                & 0.923 & 0.026       & NEP-CMP   & Computational Economics\\
-        PRINCETON UNIV           & 0.971 & 0.051       & NEP-CNA   & China\\
-        UNIV ILLINOIS            & 0.557 & 0.031       & NEP-COM   & Industrial Competition\\
-        BOSTON UNIV              & 0.913 & 0.012       & NEP-CSE   & Economics of Strategic Management\\
-        UNIV N CAROLINA          & 0.403 & 0.0         & NEP-CTA   & Contract Theory \& Applications\\
-        \ldots                   &       &             &           &\\
-        UNIV NEW MEXICO          & 0.038 & 0.140       & NEP-ORE   & Operations Research\\
-        CUNY HUNTER COLL         & 0.105 & 0.0         & NEP-PBE   & Public Economics\\
-        UNIV MIAMI               & 0.086 & 0.0         & NEP-PKE   & Post Keynesian Economics\\
-        TUFTS UNIV               & 0.538 & 0.0         & NEP-POL   & Positive Political Economics\\
-        BRIGHAM YOUNG UNIV       & 0.336 & 0.0         & NEP-PPM   & Project, Program \& Portfolio M\\
-        UNIV CALIF IRVINE        & 0.644 & 0.0         & NEP-PUB   & Public Finance\\
-        UNIV HAWAII MANOA        & 0.144 & 0.0         & NEP-REG   & Regulation\\
-        EMORY UNIV               & 0.326 & 0.0         & NEP-RES   & Resource Economics\\
-        UNIV CALIF SAN DIEGO     & 0.855 & 0.056       & NEP-RMG   & Risk Management\\
-        WELLESLEY COLL           & 0.432 & 0.257       & NEP-SBM   & Small Business Management\\
-        CUNY                     & 0.375 & 0.0         & NEP-SEA   & South East Asia\\
-        DREXEL UNIV              & 0.067 & 0.0         & NEP-SOC   & Social Norms \& Social Capital\\
-        MIDDLEBURY COLL          & 0.182 & 0.0         & NEP-SOG   & Sociology of Economics anagent\\
-        SANTA CLARA UNIV         & 0.115 & 0.0         & NEP-SPO   & Sports \& Economics\\
-        UNIV CALIF SANTA CRUZ    & 0.615 & 0.0         & NEP-TID   & Technology \& Industrial Dynami\\
-        SUNY ALBANY              & 0.394 & 0.0         & NEP-TRA   & Transition Economics\\
-        TULANE UNIV              & 0.317 & 0.192       & NEP-TRE   & Transport Economics\\
-        APPALACHIAN STATE UNIV   & 0.269 & 0.0         & NEP-TUR   & Tourism Economics\\
-        RENSSELAER POLYTECH INST & 0.298 & 0.0         & NEP-UPT   & Utility Models \& Prospect Theo\\
-        CHAPMAN UNIV             & 0.548 & 0.0         & NEP-URE   & Urban \& Real Estate Economics \\ \hline
-    \end{tabular}
-    \caption{Selected departments and fields.}
+    {\footnotesize
+    \begin{tabular}{lll}
+        \hline
+        DEPT                     & QUAL  & JENS. FIELD \\ \hline \hline
+        UNIV MICHIGAN            & 0.884 & 0.035       \\
+        PURDUE UNIV              & 0.490 & 0.0036      \\
+        PENN STATE UNIV          & 0.663 & 0.067       \\
+        HARVARD UNIV             & 1.0   & 0.014       \\
+        UNIV PENN                & 0.903 & 0.041       \\
+        CORNELL UNIV             & 0.817 & 0.016       \\
+        UNIV ROCHESTER           & 0.355 & 0.086       \\
+        MIT                      & 0.980 & 0.086       \\
+        UNIV MARYLAND            & 0.798 & 0.060       \\
+        STANFORD UNIV            & 0.932 & 0.028       \\
+        UNIV DELAWARE            & 0.346 & 0.0         \\
+        CARNEGIE MELLON UNIV     & 0.625 & 0.047       \\
+        YALE UNIV                & 0.923 & 0.026       \\
+        PRINCETON UNIV           & 0.971 & 0.051       \\
+        UNIV ILLINOIS            & 0.557 & 0.031       \\
+        BOSTON UNIV              & 0.913 & 0.012       \\
+        UNIV N CAROLINA          & 0.403 & 0.0         \\
+        \ldots                   &       &             \\
+        UNIV NEW MEXICO          & 0.038 & 0.140       \\
+        CUNY HUNTER COLL         & 0.105 & 0.0         \\
+        UNIV MIAMI               & 0.086 & 0.0         \\
+        TUFTS UNIV               & 0.538 & 0.0         \\
+        BRIGHAM YOUNG UNIV       & 0.336 & 0.0         \\
+        UNIV CALIF IRVINE        & 0.644 & 0.0         \\
+        UNIV HAWAII MANOA        & 0.144 & 0.0         \\
+        EMORY UNIV               & 0.326 & 0.0         \\
+        UNIV CALIF SAN DIEGO     & 0.855 & 0.056       \\
+        WELLESLEY COLL           & 0.432 & 0.257       \\
+        CUNY                     & 0.375 & 0.0         \\
+        DREXEL UNIV              & 0.067 & 0.0         \\
+        MIDDLEBURY COLL         & 0.182 & 0.0         \\
+        SANTA CLARA UNIV         & 0.115 & 0.0         \\
+        UNIV CALIF SANTA CRUZ    & 0.615 & 0.0         \\
+        SUNY ALBANY              & 0.394 & 0.0         \\
+        TULANE UNIV              & 0.317 & 0.192       \\
+        APPALACHIAN STATE UNIV   & 0.269 & 0.0         \\
+        RENSSELAER POLYTECH INST & 0.298 & 0.0         \\
+        CHAPMAN UNIV             & 0.548 & 0.0         \\ \hline
+    \end{tabular}}
+    \caption{Selected departments.}
     \label{tab:dep_field}
 \end{table}
 
-All the data collection program files will be available on my website soon.
+\clearpage
+
+\begin{table}[!ht]
+    \centering
+    {\footnotesize
+    \begin{tabular}{ll}
+        \hline
+        NEP ABREV & FIELD NAME\\ \hline \hline
+        NEP-ACC   & Accounting \& Auditing\\
+        NEP-AFR   & Africa\\
+        NEP-AGE   & Economics of Ageing\\
+        NEP-AGR   & Agricultural Economics\\
+        NEP-ARA   & Arab World\\
+        NEP-BAN   & Banking\\
+        NEP-BEC   & Business Economics\\
+        NEP-CBA   & Central Banking\\
+        NEP-CBE   & Cognitive \& Behavioural Economics\\
+        NEP-CDM   & Collective Decision-Making\\
+        NEP-CFN   & Corporate Finance\\
+        NEP-CIS   & Confederation of Independent States\\
+        NEP-CMP   & Computational Economics\\
+        NEP-CNA   & China\\
+        NEP-COM   & Industrial Competition\\
+        NEP-CSE   & Economics of Strategic Management\\
+        NEP-CTA   & Contract Theory \& Applications\\
+                  &\\
+        NEP-ORE   & Operations Research\\
+        NEP-PBE   & Public Economics\\
+        NEP-PKE   & Post Keynesian Economics\\
+        NEP-POL   & Positive Political Economics\\
+        NEP-PPM   & Project, Program \& Portfolio M\\
+        NEP-PUB   & Public Finance\\
+        NEP-REG   & Regulation\\
+        NEP-RES   & Resource Economics\\
+        NEP-RMG   & Risk Management\\
+        NEP-SBM   & Small Business Management\\
+        NEP-SEA   & South East Asia\\
+        NEP-SOC   & Social Norms \& Social Capital\\
+        NEP-SOG   & Sociology of Economics anagent\\
+        NEP-SPO   & Sports \& Economics\\
+        NEP-TID   & Technology \& Industrial Dynami\\
+        NEP-TRA   & Transition Economics\\
+        NEP-TRE   & Transport Economics\\
+        NEP-TUR   & Tourism Economics\\
+        NEP-UPT   & Utility Models \& Prospect Theo\\
+        NEP-URE   & Urban \& Real Estate Economics \\ \hline
+
+    \end{tabular}}
+    \caption{Selected fields.}
+\end{table}
 
 \section{Verifying contraction mapping}
 \label{sec:contr_map}
@@ -1823,8 +1874,8 @@ The substitution of $\gamma_e$ is an identity.\footnote{This identity can be fou
 \section{MCMC diagnostics}
 \label{sec:MCMC_diag}
 
-\begin{figure}[h!]
-    \includegraphics{pics/params_plots_big.png}
+\begin{figure}[!ht]
+    \includegraphics[scale=0.35]{pics/params_plots_big.png}
     \caption{Mixing plots}
     \label{fig:mix}
 \end{figure}
@@ -1836,11 +1887,11 @@ Table \ref{tab:grtest} presents Gelman-Rubin convergence criterion results. Reca
 Gelman-Rubin convergence criterion, the test value must be below 1.1.
 All parameters pass the Gelman-Rubin test.
 
-\begin{table}[h!]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|l|l|l|}
+    \begin{tabular}{lll}
         \hline
-        parameter       & GR criterion \\ \hline
+        parameter       & GR criterion \\ \hline \hline
         $\alpha$        & 1.013  \\
         $\beta$         & 1.003  \\
         $\gamma_{F}$    & 1.019  \\
@@ -1924,9 +1975,9 @@ distribution in the data.  Using the 1994 distribution of academics over departm
 as the initial distribution, I simulated the model for 1000 years.  The first 500
 years were thrown out as a burn-in.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    \includegraphics{pics/mov_plts.png}
+    \includegraphics[scale=0.5]{pics/mov_plts.png}
     \caption{TL: Histogram of data, TR: Histogram of simulation means, BL: Scatter plot data vs. simulation means, BR: Two standard deviations of simulation variation against data.}
     \label{fig:mov_plts}
 \end{figure}
@@ -1956,22 +2007,22 @@ In this appendix I present a table comparing the baseline Jensen estimates to a 
 \citet{grossman1986costs}.  This is a slightly older version of the model in the baseline section.  As can be seen in Table \ref{tab:post_comp}, the estimates are almost 
 identical.
 
-\begin{table}[h!]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|l|l|l|l|l|}
+    \begin{tabular}{lllll}
         \hline
-         & \multicolumn{2}{|c|}{Baseline}        & \multicolumn{2}{|c|}{Grossman Hart} \\ \hline\hline
-                            & mean    & std   & mean       & std    \\ \hline
-         $\alpha$           & -0.651  & 0.163 & -0.456     & 0.176  \\ \hline
-         $\beta$            & 19.272  & 6.402 & 17.394     & 6.069  \\ \hline
-         $\gamma_{F}$       & 0.089   & 0.028 & 0.089      & 0.004  \\ \hline
-         $\gamma_{NF}$      & 0.034   & 0.004 & 0.034      & 0.029  \\ \hline
-         $\xi_f$            & 0.973   & 0.910 & 1.100      & 0.881  \\ \hline
-         $\xi_l$            & 0.666   & 0.182 & 0.675      & 0.174  \\ \hline
-         $\xi_q$            & 0.404   & 0.031 & 0.403      & 0.032  \\ \hline
-         $\lambda_o$        & 0.045   & 0.002 & 0.045      & 0.002  \\ \hline
-         $\phi_F$           & -21.586 & 0.282 & -21.575    & 0.281  \\ \hline
-         $\sigma$           & 0.820   & 0.009 & 0.820      & 0.008  \\ \hline
+         & \multicolumn{2}{c}{Baseline}        & \multicolumn{2}{c}{Grossman Hart} \\ \hline\hline
+                            & mean    & std   & mean       & std    \\ 
+         $\alpha$           & -0.651  & 0.163 & -0.456     & 0.176  \\ 
+         $\beta$            & 19.272  & 6.402 & 17.394     & 6.069  \\ 
+         $\gamma_{F}$       & 0.089   & 0.028 & 0.089      & 0.004  \\ 
+         $\gamma_{NF}$      & 0.034   & 0.004 & 0.034      & 0.029  \\ 
+         $\xi_f$            & 0.973   & 0.910 & 1.100      & 0.881  \\ 
+         $\xi_l$            & 0.666   & 0.182 & 0.675      & 0.174  \\ 
+         $\xi_q$            & 0.404   & 0.031 & 0.403      & 0.032  \\ 
+         $\lambda_o$        & 0.045   & 0.002 & 0.045      & 0.002  \\ 
+         $\phi_F$           & -21.586 & 0.282 & -21.575    & 0.281  \\ 
+         $\sigma$           & 0.820   & 0.009 & 0.820      & 0.008  \\ 
          $\xi_{ex}$         & 0.266   & 1.276 & 0.225      & 0.827  \\ \hline
     \end{tabular}
     \caption{Posterior moment comparison}
@@ -1981,32 +2032,31 @@ identical.
 \section{Posterior Kernal Densities for Alternative Models}
 \label{sec:altmodels}
 
-\begin{figure}[h!]
-    \includegraphics{pics/params_dists_reg.png}
+\begin{figure}[!ht]
+    \includegraphics[scale=0.35]{pics/params_dists_reg.png}
     \caption{Posteriors for national model}
 \end{figure}
 
-\begin{figure}[h!]
-    \includegraphics{pics/params_dists_split.png}
+\begin{figure}[!ht]
+    \includegraphics[scale=0.35]{pics/params_dists_split.png}
     \caption{Posteriors for field-specific model}
 \end{figure}
 
-\begin{figure}[h!]
-    \includegraphics{pics/params_dists_lag.png}
+\begin{figure}[!ht]
+    \includegraphics[scale=0.35]{pics/params_dists_lag.png}
     \caption{Posteriors for publication lag model}
 \end{figure}
 
 \clearpage 
 
-\section{Comparison of baseline priors on $\beta$} 
+\section{Comparison of baseline priors} 
 \label{sec:prior_comp}
 
-\begin{table}[h!]
+\begin{table}[!ht]
     \centering
     \begin{tabular}{lllll}
         \hline
-         & \multicolumn{2}{|c|}{Exponential (300)}        & \multicolumn{2}{|c|}{Diffuse} \\ \hline\hline 
-                            & mean    & std   & mean       & std    \\ \hline
+         & \multicolumn{2}{c}{Exponential (300)}        & \multicolumn{2}{c}{Diffuse} \\ \hline                            & mean    & std   & mean       & std    \\ \hline \hline
          $\alpha$             & -0.447 & 0.179 & -0.628 & 0.178 \\ 
          $\beta$              & 14.128 & 5.850 & 15.992 & 6.466 \\ 
          $\gamma_{F}$         & 0.035  & 0.004 & 0.034  & 0.004 \\ 
@@ -2021,5 +2071,5 @@ identical.
          $\xi_{ex}$           & 0.919  & 0.739 & 0.021  & 0.126 \\ \hline 
     \end{tabular}                              
     \caption{Posterior moment comparison, alternate priors}
-    \label{tab:post_comp_priors}
+    \label{tab:prior_comp}
 \end{table}
