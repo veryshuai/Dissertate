@@ -72,6 +72,7 @@
 \RequirePackage[tight,nice]{units}
 \RequirePackage{verbatim}
 \setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{4}
 
 \RequirePackage{url}
 \usepackage[titles]{tocloft}
