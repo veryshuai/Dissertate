@@ -1,16 +1,16 @@
 % -------------------------------------------------------------------
 %  @LaTeX-class-file{
 %     filename        = "Dissertate.cls",
-%     version         = "1.0",
-%     date            = "24 January 2014",
+%     version         = "1.1", (Fork by David Jinkins at Penn State)
+%     date            = "11 May, 2014",
 %     codetable       = "ISO/ASCII",
 %     keywords        = "LaTeX, Dissertate",
-%     supported       = "send email to suchow@post.harvard.edu",
+%     supported       = "send email to david.jinkins@gmail.com",
 %     docstring       = "Class for a dissertation."
 % --------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{Dissertate}[2014/01/24 v1.0 Dissertate Class]
+\ProvidesClass{Dissertate}[2014/05/11 v1.1 Dissertate Class]
 \LoadClass[12pt, oneside, letterpaper]{book}
 
 %add packages here
@@ -36,12 +36,25 @@
 \def\universitycity#1{\gdef\@universitycity{#1}}
 \def\universitystate#1{\gdef\@universitystate{#1}}
 \def\programname#1{\gdef\@programname{#1}}
+\def\college#1{\gdef\@college{#1}}
 \def\pdOneName#1{\gdef\@pdOneName{#1}}
 \def\pdOneSchool#1{\gdef\@pdOneSchool{#1}}
 \def\pdOneYear#1{\gdef\@pdOneYear{#1}}
 \def\pdTwoName#1{\gdef\@pdTwoName{#1}}
 \def\pdTwoSchool#1{\gdef\@pdTwoSchool{#1}}
 \def\pdTwoYear#1{\gdef\@pdTwoYear{#1}}
+\def\chairname#1{\gdef\@chairname{#1}}
+\def\chairtit#1{\gdef\@chairtit{#1}}
+\def\chairloc#1{\gdef\@chairloc{#1}}
+\def\comonename#1{\gdef\@comonename{#1}}
+\def\comonetit#1{\gdef\@comonetit{#1}}
+\def\comoneloc#1{\gdef\@comoneloc{#1}}
+\def\comtwoname#1{\gdef\@comtwoname{#1}}
+\def\comtwotit#1{\gdef\@comtwotit{#1}}
+\def\comtwoloc#1{\gdef\@comtwoloc{#1}}
+\def\comthreename#1{\gdef\@comthreename{#1}}
+\def\comthreetit#1{\gdef\@comthreetit{#1}}
+\def\comthreeloc#1{\gdef\@comthreeloc{#1}}
 
 \RequirePackage{color}
 \usepackage{hyperref}
@@ -83,7 +96,7 @@
 
 \renewcommand\bibname{References}
 \renewcommand\listfigurename{Listing of figures}
-\RaggedRight
+%\RaggedRight
 
 \parindent 12pt
 \RequirePackage{mathspec}

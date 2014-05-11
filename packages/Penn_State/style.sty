@@ -1,0 +1,131 @@
+\ProvidesPackage{packages/Penn_State/style}
+
+% School name and location
+\university{The Pennsylvania State University}
+\universitycity{State College}
+\universitystate{Pennsylvania}
+
+% School color found from university's graphic identity site:
+% http://ur.psu.edu/stylemanual/graphic_identity/grunivmark.html
+% NOTE: Penn State's official Royal Blue {0,0,0.153} is darker,
+% It looked black on my moniter, so I lighted it a bit.
+\definecolor{SchoolColor}{rgb}{0, 0, 0.250} % Royal Blue
+\definecolor{chaptergrey}{rgb}{0, 0, 0.250} % for chapter numbers
+
+\hypersetup{
+    colorlinks,
+    citecolor=SchoolColor,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=SchoolColor,
+}
+
+\renewcommand{\frontmatter}{
+	\input{frontmatter/personalize}
+	\maketitle
+	\committeepage
+	\abstractpage
+	\tableofcontents
+	% \listoffigures % optional
+	\dedicationpage
+	\acknowledgments
+}
+
+\renewcommand{\maketitle}{
+	\thispagestyle{empty}
+	\vspace*{\fill}
+    \begin{center}
+	\vspace{20pt}
+	\@university\\ The Graduate School\\ College of \@college \\
+	\vspace{120pt}
+	\Huge \textcolor{SchoolColor}{\thetitle} \normalsize \\
+	\vspace{50pt}
+	\textsc{a dissertation\  in \\ \@department \\ by\\
+	\theauthor\\
+	\vspace{50pt}
+	\scshape \noindent \small \copyright \small 2014\hspace{3pt}-- \theauthor \\
+	\noindent all rights reserved.\\
+	\vspace{12pt}
+	Submitted in partial fulfillment of the requirements\\
+	for the degree of\\ 
+	\vspace{12pt}
+	\@degree\\
+	\vspace{12pt}
+	\@degreemonth\ \@degreeyear}
+	\end{center} \vspace*{\fill}
+}
+
+\newcommand{\copyrightpage}{
+	\newpage
+	\thispagestyle{empty}
+	\vspace*{\fill}
+	\scshape \noindent \small \copyright \small 2014\hspace{3pt}-- \theauthor \\
+	\noindent all rights reserved.
+	\vspace*{\fill}
+	\newpage
+	\rm
+}
+
+\newcommand{\committeepage}{
+	\newpage
+	\pagenumbering{roman}
+	\setcounter{page}{2}
+	\vspace*{\fill}
+    \begin{center}
+    \noindent The dissertation of David C. Jinkins was reviewed and approved\footnotemark\footnotetext{Signatures are on file in the Graduate School.} by the following:\\
+	\vspace{60pt}
+    {\large\textbf{\@chairname}}\\
+    \@chairtit\\
+    \@chairloc\\
+    \emph{Dissertation Adviser and Chair of Committee}\\
+	\vspace{30pt}
+    {\large\textbf{\@comonename}}\\
+    \@comonetit\\
+    \@comoneloc\\
+	\vspace{30pt}
+    {\large\textbf{\@comtwoname}}\\
+    \@comtwotit\\
+    \@comtwoloc\\
+	\vspace{30pt}
+    {\large\textbf{\@comthreename}}\\
+    \@comthreetit\\
+    \@comthreeloc\\
+	\vspace{60pt}
+    \end{center} \vspace*{\fill}
+	\newpage
+	\rm
+}
+
+\newcommand{\abstractpage}{
+	\newpage
+	\pagenumbering{roman}
+	\setcounter{page}{3}
+	\pagestyle{fancy}
+	\lhead{Thesis advisor: Professor \@advisor} \rhead{\@author}
+	\renewcommand{\headrulewidth}{0.0pt}
+	\vspace*{35pt}
+	\begin{center}
+	\Large \textcolor{SchoolColor}{\@title} \normalsize \\
+	\vspace*{20pt}
+	\scshape Abstract \\ \rm
+	\end{center}
+	\input{frontmatter/abstract}
+	\vspace*{\fill}
+	\newpage \lhead{} \rhead{}
+	\cfoot{\thepage}
+}
+
+\newcommand{\dedicationpage}{
+	\newpage \thispagestyle{fancy} \vspace*{\fill}
+	\scshape \noindent \input{frontmatter/dedication}
+	\vspace*{\fill} \newpage \rm
+}
+
+\newcommand{\acknowledgments}{
+	\chapter*{Acknowledgments}
+	\noindent
+	\input{frontmatter/thanks}
+	\vspace*{\fill} \newpage
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+}
