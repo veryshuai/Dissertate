@@ -164,11 +164,11 @@ I have only a single Chinese demographic category, so when estimating Chinese pr
 
 In order to estimate the parameter of interest $\alpha$, we must jointly estimate the observation type of each household and four preference distribution parameters for each good category.  This is a large problem, so I split the estimation into two steps by using a 'hard' expectation maximization algorithm.  In the first step (maximization), I condition on the observation type of each household and update $\alpha$ and preference distribution parameters.  In the second stage, I take $\alpha$ and the preference distribution parameters as given and find the most likely observation type of each household (expectation).  The algorithm stops when there is no change in $\alpha$.
 
-\subsection{Maximization: Updating $\alpha$ and preference distribution parameters} 
+\subsection{Maximization: Updating $\alpha$ and Preference Distribution Parameters} 
 
 In the maximization step, I condition the likelihood function on the observation type $t_i$ of each household and update $\alpha$ and lognormal preference distribution parameters $\mu_g$, $\sigma_g$, wealth-scaling parameter $\psi_g$, and a zero probability $z_g$.  Given $\alpha$, the preference parameters $\boldsymbol{\gamma}_i$ of each household can be calculated using observed consumption shares.  Once we have preference parameters for each household, we can analytically calculate the most likely lognormal distribution and zero parameters.  The outer structure of the maximization step is to let a numerical optimizer maximize the conditional likelihood over $\alpha$, and to treat the likelihood-maximizing preference parameters as functions of $\alpha$.
 
-\subsubsection{Recovering Household Preference Parameters given $\alpha$}
+\subsubsection{Recovering Household Preference Parameters Given $\alpha$}
 \label{sec:upd_prefs}
 
 Taking observation type $t_i$ and $\alpha$ as given, there is a mapping from observed consumption shares directly to household preference parameters.  Consider a household of observed wealth type $w$, observed consumption vector $C$, and observation type $t$.  Rearranging \eqref{eq:opt_cobb}, $\gamma_g$ for $g\neq t$ are given by :
@@ -199,7 +199,7 @@ Let an upper bar denote sample means over non-zero $\gamma_i$'s, and let $m_i$ r
     \sigma_g^{2*} &= \overline{\left(\ln \gamma - t_g^* \ln m - \mu_g^*\right)^2}
 \end{align}
 
-\subsubsection{Full conditional likelihood function}
+\subsubsection{Full Conditional Likelihood Function}
 
 I have shown how, given observation types, it is straight-forward to calculate preference parameters and likelihood maximizing preference distribution parameters as a function of $\alpha$.  Let $\phi$ be the log-normal probability density function.   The maximization step conditional log-likelihood function is given in \eqref{lik1}.  All preference parameters and preference distribution parameters are implicitly functions of $\alpha$.
 
@@ -210,7 +210,7 @@ I have shown how, given observation types, it is straight-forward to calculate p
 
 Likelihood \eqref{lik1} is the objective function used by the numerical solver in the search for $\alpha$.  This completes the characterization of the maximization step in the algorithm.
 
-\subsection{Expectation: Updating observation type $t_i$} 
+\subsection{Expectation: Updating Observation Type $t_i$} 
 
 Given the utility weight of social beliefs $\alpha$ and a set of preference distribution parameters, we find the most likely observation type for each household. Now preference parameters $\gamma_{ig}$ are a function of observation type $t$ and are calculated exactly as in Section \ref{sec:upd_prefs}. $\mathbf{v}_i$ is the household-specific vector of observation type probabilities.  Household $i$'s (unnormalized) probability of being observation type $t \in G$ is given by \eqref{lik2}.
 
@@ -249,11 +249,11 @@ Figure \ref{fig:vinmatch} is a scatter plot of the vindex probabilities and the 
     \label{fig:vinmatch}
 \end{figure}
 
-\subsection{Policy analysis: luxury tax}
+\subsection{Policy Analysis: Luxury Tax}
 
 In the model developed above, a consumer distorts his full-information utility-maximizing consumption bundle in order to signal his wealth.  The signal is on expenditures, however, not on physical goods.  In principle, a social planner could impose a sales tax on a highly visible good category in order to reduce physical consumption.  In the real world, such a tax is known as a luxury tax.  In this section I consider the welfare implications of two such tax schemes, one in the United States, and one in China.
 
-\subsubsection{Application: Welfare effect of US automotive luxury taxes}
+\subsubsection{Application: Welfare Effect of US Automotive Luxury Taxes}
 
 In 1990, President George H.W. Bush signed the Omnibus Budget Reconciliation Act into law.\footnotemark\footnotetext{Some readers might remember that this act proved television to be a poor medium for lip-reading.}  The OBRA contained a provision for a luxury tax on automobiles, as well as jewelry, furs, yachts, and personal aircraft.  The tax on autos was 10\% of the price exceeding \$30,000.  As one might imagine, the luxury tax did not go over well at campaign fundraisers and was repealed in 1993 for all goods except automobiles.\footnotemark\footnotetext{A cynical political realist might observe that luxury vehicles are often imported from Europe.}  Congress finally scrapped the auto tax in 2002.
 

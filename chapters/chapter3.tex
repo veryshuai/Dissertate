@@ -159,10 +159,10 @@ specifications are estimated, and the models are simulated and checked
 against data.  Finally, the results of a reduced-form probit model with a similar 
 message to the main structural model are presented.
 
-\section{Model}
+\section{An Empirical Model of Knowledge Diffusion}
 \label{sec:model}
 
-\subsection{Learning and citation}
+\subsection{Learning and Citation}
 \label{sec:learncit}
 
 Time is discrete. There is a finite number $A$ of academics partitioned
@@ -288,7 +288,7 @@ payoffs and learning probabilities.  While latent type is unobserved, it is assu
 to be fixed over time.  This extreme form of serial correlation
  will be discussed further in Section \ref{sec:ident}.
 
-\subsection{Initial conditions}
+\subsection{Initial Conditions}
 \label{sec:init_cond}
 
 In the model described above, latent type $h_i$ is assumed to be
@@ -426,7 +426,7 @@ Journal fields are constructed using the JEL field rankings in \citet{barrett200
 To get a field for each paper, journal and academic fields are combined and normalized.
 Field construction is described in detail in the data appendix, Appendix \ref{sec:dat_cons}.
 
-\subsection{Baseline structural model}
+\subsection{Baseline Structural Model}
 \label{sec:struct_dat}
 
 In this section I describe the construction of variables specific to the estimation
@@ -514,9 +514,9 @@ estimation.
     \label{tab:dep_sum}
 \end{table}
 
-\section{Estimation}
+\section{Identification and Estimation Routine}
 
-\subsection{Identification and causality}
+\subsection{Identification and Causality}
 \label{sec:ident}
 
 The main parameter of interest is $\beta$ in \eqref{eq:citprob}, the
@@ -611,7 +611,7 @@ parameters $\xi$ are identified by observed department move choices in the data,
 substitution patterns. The cost of movement $\mathcal{C}$ is
 identified by the frequency of moves.
 
-\subsection{Exogenous variation: Economic malaise of 1990-1991}
+\subsection{Exogenous Variation: Economic Malaise of 1990-1991}
 
 Induced partly by an oil price shock caused by the Iraqi invasion of
 Kuwait, the United States went through an economic recession from July,
@@ -766,7 +766,7 @@ from the other chains after a burn in, then we say that draws from the
 chains are independent draws from the posterior distribution. All
 parameters in the estimation routine pass the Gelman-Rubin test.
 
-\section{Results}
+\section{Analysis of Results}
 
 \begin{figure}[!ht]
     \centering
@@ -852,7 +852,7 @@ a department with high field fraction and quality has lower average initial late
 the sorting implied by the negative coefficient on the wage interaction between latent type and field $\xi_l$.
 The standard deviation of latent type is estimated to be a bit less than one.
 
-\subsection{Intuition for counterfactuals}
+\subsection{Intuition for Counterfactuals}
 \label{sec:count_int}
 
 Before I get to the results of the counterfactual exercise, first I present some
@@ -953,7 +953,7 @@ As expected, combining the firms has no effect on the aggregate diffusion rate. 
 Even though the model developed in this section is just a toy, the logic
 goes through to the empirical model developed above. Movement between
 firms should make firms both more similar in terms of knowledge shares and increase aggregate diffusion.
-\subsection{Counterfactual results}
+\subsection{Counterfactual Results}
 
 The counterfactuals in this section involve varying the movement cost parameter $\mathcal{C}$. 
 I begin  by drawing a set of parameters from the
@@ -1000,7 +1000,7 @@ The less dramatic counterfactuals push diffusion
  As time goes to infinity, all potentially interested academics learn about the new paper. 
  As expected, increasing movement between departments speeds up knowledge diffusion.
 
-\section{Cross-country diffusion}
+\section{Extension to Cross-Country Diffusion}
 
 This section calibrates a model of international knowledge diffusion using 
 information from the estimated structural model.  In particular, I show that
@@ -1106,7 +1106,7 @@ will change as source country workers benefit from the knowledge
 of return migrants.  More rigorous estimation of international labor movement and
  knowledge diffusion is a natural next step in this project.
 
-\section{Extensions}
+\section{Alternative Model Specifications}
 \label{sec:extensions}
 
 In this section, three extensions to the basic structural model are
@@ -1232,7 +1232,7 @@ simulation period.  The benchmark and field-specific
 parameter models display very similar behavior, and are generally in between
 the baseline and the publication lag model in level.
 
-\section{Probit Model}
+\section{Instrumented Probit Model}
 \label{sec:end_probit}
 
 \begin{table}[!ht]
