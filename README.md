@@ -1,7 +1,9 @@
 # Dissertate: a LaTeX dissertation template [![Build Status](https://travis-ci.org/suchow/Dissertate.svg?branch=master)](https://travis-ci.org/suchow/Dissertate)
 
 
-This package provides all the files needed to support the production and typesetting of a PhD dissertation at Harvard, Princeton, and NYU, though it can easily be adapted to meet the requirements of other schools. The format and styling is based closely on the requirements published by each university's registrar.
+This package provides all the files needed to support the production and typesetting of a PhD dissertation at Harvard, Princeton, NYU, and Penn State though it can easily be adapted to meet the requirements of other schools. The format and styling is based closely on the requirements published by each university's registrar.
+
+This version is less of a template, and the actual production copy of the dissertation of David Jinkins at Penn State.  Most of the changes from the original version were to meet Penn State's dissertation format requirements, but a few were also specific to my dissertation, such as reducing the whitespace on the acknowledgments section in order to fit more thank yous on one page.
 
 
 ## Getting started
