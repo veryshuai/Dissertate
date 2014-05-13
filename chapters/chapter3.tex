@@ -495,8 +495,8 @@ estimation.
 \begin{table}[!ht]
     \centering
     \begin{tabular}{lllllll}
-        \hline
-                 & Obs Number & In Field & Citers & Moves & Cits / Pap, avg & Cits / Pap, sd \\ \hline \hline
+        \hline \hline
+              \    & Obs Number & In Field & Citers & Moves & Cits / Pap, avg & Cits / Pap, sd \\ \hline 
         Academicss  & 3876       & 150      & 122    & 679   & 26              & 29             \\ \hline
     \end{tabular}
     \caption{Academic summary statistics}
@@ -506,8 +506,8 @@ estimation.
 \begin{table}[!ht]
     \centering
     \begin{tabular}{lllllll}
-        \hline
-                    & Obs Number & 1987 med size & 1994 med size & Field, (avg, sd) & Avg cits / pap, (avg, sd) \\ \hline\hline
+        \hline\hline
+                    & Obs Number & 1987 med size & 1994 med size & Field, (avg, sd) & Avg cits / pap, (avg, sd) \\ \hline
         Departments & 104        & 16               & 24               & (0.03,0.06)           & (20,9) \\ \hline
     \end{tabular}
     \caption{Department summary statistics}
@@ -636,8 +636,8 @@ is similar to the data cut I use in the structural exercise.
 \begin{table}[h]
     \centering
     \begin{tabular}{lllll}
-        \hline
-                            & net in-moves &   net in-moves &     net in-moves &    net in-moves \\   \hline \hline
+        \hline\hline
+                            & net in-moves &   net in-moves &     net in-moves &    net in-moves \\   \hline 
 dum91bd                     &     -8.568** &     -12.280**  &      -6.784**    &      -7.055**   \\
                             &      (4.24)  &      (4.93)    &      (2.88)      &      (2.84)     \\
 year dummies                &        no    &         yes    &          yes     &         yes     \\
@@ -698,8 +698,8 @@ parameters 1/8 and 2, which gives a standard deviation of 0.13.
 \begin{table}[!ht]
     \centering
     \begin{tabular}{ll}
-        \hline
-                             & \textbf{Prior} \\ \hline \hline
+        \hline\hline
+                             & \textbf{Prior} \\ \hline
          $\alpha$            & Norm(0,100)    \\ 
          $\beta$             & Exp(300)       \\ 
          $\gamma_{F}$        & Beta(1,2)      \\ 
@@ -778,8 +778,8 @@ parameters in the estimation routine pass the Gelman-Rubin test.
 \begin{table}[!ht]
     \centering
     \begin{tabular}{llllll}
-        \hline
-                              & mean   & std   & 25\%   & 50\%   & 75\%   \\ \hline \hline
+        \hline\hline
+                              & mean   & std   & 25\%   & 50\%   & 75\%   \\ \hline 
          $\alpha$             & -0.447 & 0.179 & -0.571 & -0.440 & -0.322 \\ 
          $\beta$              & 14.128 & 5.850 & 9.801  & 14.138 & 18.244 \\ 
          $\gamma_{F}$         & 0.035  & 0.004 & 0.031  & 0.034  & 0.038  \\ 
@@ -1140,8 +1140,8 @@ I pool the three observed 1987 cites in with the observed 1988 cites.
 \begin{table}[!ht]
     \centering
     \begin{tabular}{lllllllll}
-        \hline
-       \textbf{param} & \multicolumn{2}{c}{\textbf{baseline}} & \multicolumn{2}{c}{\textbf{field-dep}} & \multicolumn{2}{c}{\textbf{nation}}  & \multicolumn{2}{c}{\textbf{lag}}    \\ \hline \hline
+        \hline\hline;
+       \textbf{param} & \multicolumn{2}{c}{\textbf{baseline}} & \multicolumn{2}{c}{\textbf{field-dep}} & \multicolumn{2}{c}{\textbf{nation}}  & \multicolumn{2}{c}{\textbf{lag}}    \\ \hline 
         $\alpha$      & -0.447 & (0.179) & -0.574 & (0.204) & -0.955 & (0.184) & -0.252 & (0.159) \\ 
         $\alpha_f$    &        &         & 0.170  & (0.488) &        &         &        &         \\ 
         $\beta$       & 14.128 & (5.850) & 16.991 & (5.881) & 6.537  & (4.654) & 10.418 & (4.295) \\ 
@@ -1238,10 +1238,10 @@ the baseline and the publication lag model in level.
 \begin{table}[!ht]
     \centering
     \begin{tabular}{lllllll}
-    \hline
+    \hline\hline
                         &       cit92   &       cit92   &       cit92   &    cit92\_93  &    cit92\_93  &    cit92\_93  \\
                         &        b/se   &        b/se   &        b/se   &        b/se   &        b/se   &        b/se   \\
-    \textbf{probit eq 1}&               &               &               &               &               &               \\ \hline \hline
+    \textbf{probit eq 1}&               &               &               &               &               &               \\ \hline
             kfrac       &      26.952*  &      37.604*  &      40.753** &      26.362** &      38.034** &      41.238** \\
                         &     (14.78)   &     (19.84)   &     (16.95)   &     (11.68)   &     (15.97)   &     (18.75)   \\
               field     &               &       0.000   &       0.000   &               &       0.023   &       0.029   \\
