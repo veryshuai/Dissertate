@@ -24,6 +24,7 @@
 \usepackage{subcaption}
 \usepackage{longtable}
 \usepackage{bbm}
+\usepackage{pdfpages}
 
 % some definitions
 \def\degreeyear#1{\gdef\@degreeyear{#1}}
