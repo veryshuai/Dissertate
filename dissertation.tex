@@ -16,10 +16,16 @@
 \abstractpage
 \tableofcontents
 %\authorlist
-\listoftables
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
-\dedicationpage
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
 \acknowledgments
+\dedicationpage
 
 \doublespacing
 
@@ -37,9 +43,10 @@
 \singlespacing
 
 % the back matter
-\clearpage
-\bibliography{/home/veryshuai/Documents/bib/biglist}
+\cleardoublepage
+\phantomsection
 \addcontentsline{toc}{chapter}{References}
+\bibliography{/home/veryshuai/Documents/bib/biglist}
 \bibliographystyle{apalike2}
 
 %\include{endmatter/colophon}

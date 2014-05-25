@@ -56,6 +56,10 @@
 \def\comthreename#1{\gdef\@comthreename{#1}}
 \def\comthreetit#1{\gdef\@comthreetit{#1}}
 \def\comthreeloc#1{\gdef\@comthreeloc{#1}}
+\def\depheadname#1{\gdef\@depheadname{#1}}
+\def\depheadtit#1{\gdef\@depheadtit{#1}}
+\def\depheadloc#1{\gdef\@depheadloc{#1}}
+\def\depheadheadtit#1{\gdef\@depheadheadtit{#1}}
 
 \RequirePackage{color}
 \usepackage{hyperref}

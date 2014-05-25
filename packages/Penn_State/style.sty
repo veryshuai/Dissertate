@@ -37,9 +37,11 @@
     \begin{center}
 	\vspace{20pt}
 	\@university\\ The Graduate School\\ College of \@college \\
-	\vspace{120pt}
-	\Huge \textcolor{SchoolColor}{\thetitle} \normalsize \\
-	\vspace{50pt}
+	\vspace{125pt}
+    \begin{spacing}{2.75} 
+	    \Huge \textcolor{SchoolColor}{\thetitle} \normalsize \\
+    \end{spacing}
+	\vspace{10pt}
 	\textsc{a dissertation\  in \\ \@department \\ by\\
 	\theauthor\\
 	\vspace{50pt}
@@ -90,7 +92,12 @@
     {\large\textbf{\@comthreename}}\\
     \@comthreetit\\
     \@comthreeloc\\
-	\vspace{60pt}
+	\vspace{30pt}
+    {\large\textbf{\@depheadname}}\\
+    \@depheadtit\\
+    \@depheadloc\\
+    \emph{\@depheadheadtit}\\
+	\vspace{30pt}
     \end{center} \vspace*{\fill}
 	\newpage
 	\rm
@@ -119,6 +126,8 @@
 	\newpage \thispagestyle{fancy} \vspace*{\fill}
 	\scshape \noindent \input{frontmatter/dedication}
 	\vspace*{\fill} \newpage \rm
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
 }
 
 \newcommand{\acknowledgments}{
@@ -126,6 +135,4 @@
 	\noindent
 	\input{frontmatter/thanks}
 	\vspace*{\fill} \newpage
-	\setcounter{page}{1}
-	\pagenumbering{arabic}
 }
