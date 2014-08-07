@@ -164,6 +164,7 @@ I have only a single Chinese demographic category, so when estimating Chinese pr
 
 \section{Estimation Procedure} 
 
+
 In order to estimate the parameter of interest $\alpha$, we must jointly estimate the observation type of each household and four preference distribution parameters for each good category.  This is a large problem, so I split the estimation into two steps by using a 'hard' expectation maximization algorithm.  In the first step (maximization), I condition on the observation type of each household and update $\alpha$ and preference distribution parameters.  In the second stage, I take $\alpha$ and the preference distribution parameters as given and find the most likely observation type of each household (expectation).  The algorithm stops when there is no change in $\alpha$.
 
 \subsection{Maximization: Updating $\alpha$ and Preference Distribution Parameters} 
